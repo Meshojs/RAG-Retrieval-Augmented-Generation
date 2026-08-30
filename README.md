@@ -1,3 +1,22 @@
+```mermaid
+flowchart LR
+    A[Embedding model] --> B[CustomEmbeddingFunction]
+    B --> C[ChromaDB collection]
+    C --> D[User query]
+    D --> E[Top-k retrieved docs]
+    E --> F[Prompt with context]
+    F --> G[Qwen2.5-0.5B answer]
+ 
+    classDef model fill:#7F77DD,stroke:#3C3489,color:#fff
+    classDef db fill:#1D9E75,stroke:#085041,color:#fff
+    classDef output fill:#D85A30,stroke:#712B13,color:#fff
+ 
+    class A,B model
+    class C,D db
+    class E,F,G output
+```
+
+
 # $$Embedding\_Model$$
 
 Built with `PyTorch Embedding` class, trained on a custom tiny dataset.
@@ -95,6 +114,9 @@ results = collection.query(
     n_results=2,
 )
 ```
+
+
+
 
 ## $$Result$$
 
