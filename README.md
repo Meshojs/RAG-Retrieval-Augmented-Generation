@@ -1,13 +1,17 @@
+# $$Embedding\_Model$$
 
-# $$Embedding_Model$$
-I used ```Pytorch Embedding class``` to create this model. I trained it on custom and tiny dataset.
-<br>
-### Anchors & Positives examples : 
-```python 
+Built with `PyTorch Embedding` class, trained on a custom tiny dataset.
+
+## $$Anchor \rightarrow Positive$$
+
+```
 ("capital of France", "The capital of France is Paris.")
    ↑ anchor                ↑ positive
 ```
-```python
+
+## $$Docs \rightarrow Anchors$$
+
+```
 docs = [
   "The Eiffel Tower is located in Paris, France.",
   "Cairo is the capital of Egypt.",
@@ -19,13 +23,15 @@ anchors = [
   "AI programming language"
 ]
 ```
-```go 
-So the mission of that technique is to provide our (Fixed knowledge model) with data :
-                                                       ↑     ↑        ↑
 
-1 - that is not trained on 
-2 - using RAG == Less hallucination 
-3 - accurate answers based on (docs + papers etc)
-```
+## $$Mission$$
 
-<img width="1200" height="600" alt="image" src="https://github.com/user-attachments/assets/79a070fc-f23f-48fa-862b-4fcd90b34df4" />
+Give a **fixed knowledge model** external data via:
+
+1. Data it wasn't trained on
+2. RAG → less hallucination
+3. Accurate answers grounded in docs/papers
+
+## $$Result$$
+
+Tested with **Qwen2.5-0.5B** → promising results
