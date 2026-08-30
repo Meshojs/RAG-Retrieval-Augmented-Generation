@@ -4,14 +4,14 @@ Built with `PyTorch Embedding` class, trained on a custom tiny dataset.
 
 ## $$Anchor \rightarrow Positive$$
 
-```
+```python
 ("capital of France", "The capital of France is Paris.")
    ↑ anchor                ↑ positive
 ```
 
 ## $$Docs \rightarrow Anchors$$
 
-```
+```python
 docs = [
   "The Eiffel Tower is located in Paris, France.",
   "Cairo is the capital of Egypt.",
